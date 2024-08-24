@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <div>
+            <div class="backDoor">
+                <div class="door">  
+                </div>
+                <style>
+                    .backDoor{
+                        background-color: #333;
+                        position:relative;
+                        width:200px;
+                        height:300px;
+                        
+                        margin: 0 auto;
+                        margin-top:50px;
+                    }
+                    .door{
+                        background-color: brown;
+                        position:absolute;
+                        top:0px;
+                        left:0px;
+                        width:200px;
+                        height:300px;
+                        transform-origin: left;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    .doorOpen{
+                        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+                    }
+                </style>  
+            </div>
+            <password-panel class="password-panel">
+                <span id="panel-monitor"></span>
+                <div id="key-panel">
+                    <button id="1" class="key-panel-button" >1</button>
+                    <button id="2" class="key-panel-button" >2</button>
+                    <button id="3" class="key-panel-button" >3</button>
+                    <button id="4" class="key-panel-button" >4</button>
+                    <button id="5" class="key-panel-button" >5</button>
+                    <button id="6" class="key-panel-button" >6</button>
+                    <button id="7" class="key-panel-button" >7</button>
+                    <button id="8" class="key-panel-button" >8</button>
+                    <button id="9" class="key-panel-button" >9</button>
+                    <button id="back" class="key-panel-button" >&#8592;</button>
+                    <button id="0" class="key-panel-button" >0</button>
+                    <button id="enter" class="key-panel-button" >&crarr;</button>
+                </div>
+                <input id="password-input" type="password" />
+                <style>
+                    .password-panel{
+                        display: flex;
+                        flex-direction: column;
+                        width: 300px;
+                        height: 360px;
+                        border: 1px black solid;
+                        background-color: gray;
+                        position:absolute;
+                        top:0px;
+                        left:0px;
+                    }
+                    .password-panel > #panel-monitor{
+                        background-color: #1b291a;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        color: #0F0;
+                        font-size: xx-large;
+                        margin: 20px;
+                        padding: 5px;
+                        height: 37px;
+                    }
+                    .password-panel > #password-input{
+                        display: none;
+                    }
+                    .password-panel > #key-panel{
+                        display: grid;
+                        grid-template-areas:
+                            ". . ."
+                            ". . ."
+                            ". . ."
+                            ". . .";
+                        justify-content: center;
+                        gap: 10px;
+                    }
+                    .password-panel > #key-panel > .key-panel-button{
+                        width: 50px;
+                        height: 50px;
+                        font: 2em sans-serif;
+                        box-shadow: 0px 5px #000000;
+                        border-radius: 5px;
+                    }
+                </style>
+                <script>
+                    const passwordMonitor = document.getElementById('panel-monitor');
+                    const passwordInput = document.getElementById('password-input');
+                    const keyPanelButtons = document.querySelectorAll('.key-panel-button');
+                    keyPanelButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const btninput = button.id
+                        if(btninput == "enter"){
+                            const inputPassword = document.getElementById('password-input').value
+                            alert("login "+ inputPassword)
+                            document.querySelector(".door").classList.toggle("doorOpen");
+            
+                        }else if(btninput == "back"){
+                            const inputString = passwordInput.value;
+                            passwordInput.value = inputString.slice(0, -1);
+                            passwordMonitor.textContent = passwordMonitor.textContent.slice(0, -1)
+                        }else{
+                            passwordInput.value += btninput;
+                            passwordMonitor.textContent += "*"
+                        }   
+                    });
+                });
+                </script>
+            </password-panel>
+        </div>
+    </body>
+</html>
+
