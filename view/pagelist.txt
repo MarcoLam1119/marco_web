@@ -1,0 +1,19 @@
+page list
+1.About me
+2.Skills & Experiences
+3.Work Experience
+4. Education
+5.certificates
+6.Projects
+7.Contact
+8.login
+    8.1.My account record
+    8.2.photo
+    8.3.video
+9.Api Tool
+    9.1.Speck to text (TTS)
+    9.2.Image to text (OCR)
+    9.3.Translate only chinese and english
+
+
+

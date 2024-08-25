@@ -1,19 +1,118 @@
-<!-- page list -->
-<!-- 1.About me -->
-<!-- 2.Skills & Experiences -->
-<!-- 3.Work Experience -->
-<!-- 4. Education -->
-<!-- 5.certificates -->
-<!-- 6.Projects -->
-<!-- 7.Contact -->
-<!-- 8.login -->
-    <!-- 8.1.My account record -->
-    <!-- 8.2.photo -->
-    <!-- 8.3.video -->
-<!-- 9.Api Tool -->
-    <!-- 9.1.Speck to text (TTS)-->
-    <!-- 9.2.Image to text (OCR) -->
-    <!-- 9.3.Translate only chinese and english-->
+<html>
+    <head>
+        <title>My Website</title>
 
+    </head>
+    <body>
+        <sidebar>
+            <ul>
+                <li>About me</li>
+                <li>Skills & Experiences</li>
+                <li>Work Experience</li>
+                <li>Education</li>
+                <li>certificates</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </sidebar>
+        <main>
+            <div class="top-catalog">
+                <div class="folder-shelf">
+                    <div id="about-me" class="folder">
+                        <div class="folder-name">About me</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                    <div id="skills-experiences" class="folder">
+                        <div class="folder-name">Skills & Experiences</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                    <div id="work-experience" class="folder">
+                        <div class="folder-name">Work Experience</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                    <div id="education" class="folder">
+                        <div class="folder-name">Education</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                    <div id="certificates" class="folder">
+                        <div class="folder-name">Certificates</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                    <div id="projects" class="folder">
+                        <div class="folder-name">Projects</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                    <div id="contact" class="folder">
+                        <div class="folder-name">Contact</div>
+                        <div class="folder-hole"></div>
+                    </div>
+                </div>
+                <style>
+                    .folder-shelf {
+                        display: flex;
+                        border-bottom: 10px solid burlywood;
+                        border-radius: 10px;
+                        justify-content: center;
+                        width: 600px;
+                    }
+                    .folder {
+                        width: 70px;
+                        height: 250px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        flex-direction: column;   
+                    }
+                    .folder#about-me {
+                        background-color: #FF0000;
+                    }   
+                    .folder#skills-experiences {
+                        background-color: #00FF00;
+                    }   
+                    .folder#work-experience {
+                        background-color: #0000FF;
+                    }
+                    .folder#education {
+                        background-color: #FFFF00;
+                    }
+                    .folder#certificates {
+                        background-color: #FF00FF;
+                    }
+                    .folder#projects {
+                        background-color: #00FFFF;
+                    }
+                    .folder#contact {
+                        background-color: #FF0000;
+                    }   
+                    .folder:hover {
+                        transform: translateY(-50px);
+                        transition: transform 0.3s ease;
+                    }
+                    .folder > .folder-name {
+                        background-color: #FFFFFF;
+                        width: 80%;
+                        height: 50%;
+                        border-radius: 10px;
+                        writing-mode: vertical-rl;
+                        margin: 10%;
+                        display: flex;
+                        color: #000000;
+                        text-decoration: none;
+                        padding-top: 10px;
+                        align-items: center;
+                        font-family: 'Comic Sans MS', sans-serif;
+                    }
+                    .folder > .folder-hole {
+                        background-color: #FFFFFF;
+                        width: 30px;
+                        height: 30px;
+                        border: 5px solid silver;
+                        border-radius: 50%;
+                    }
+                </style>
+            </div>
 
-
+        </main>
+    </body>
+    <footer></footer>
+</html>
