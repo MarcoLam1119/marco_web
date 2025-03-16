@@ -1,0 +1,5 @@
+CREATE TABLE nfc_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(255) NOT NULL,
+    timestamp DATETIME NOT NULL
+);
